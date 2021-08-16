@@ -6,58 +6,47 @@
 </script>
 
 <Router url="{url}">
-  <nav class="navigation">
-     <Link class="navigation-link" to="/">Home</Link>
-     <Link class="navigation-link" to="about">About</Link>
-   </nav>
+    <nav class="navigation">
+        <h1 class="title">vincent kempers</h1>
+        <ul class="links">
+            <li><Link to="/" class="navigation-link">Home</Link></li>
+            <li><Link to="about" class="navigation-link">About</Link></li>
+        </ul>
+    </nav>
    <div>
      <Route path="about" component="{About}" />
-     <!--for now the router just support case sensitive,
-         one workaround colud be add two time the route
-         Example.
-        <Route path="About" component="{About}" />
-     -->
      <Route path="/"><Home /></Route>
    </div>
  </Router>
 
 
  <style>
-     @font-face {
-        font-family: Raleway;
-        font-style: normal;
-        font-weight: 400;
-        src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
-    }
-
-    @font-face {
-        font-family: RalewayItalic;
-        font-style: italic;
-        font-weight: 400;
-        src: url('/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
-    }
-
-    @font-face {
-        font-family: Bitter;
-        font-style: normal;
-        font-weight: 400;
-        src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
-    }
-
-    @font-face {
-        font-family: BitterItalic;
-        font-style: italic;
-        font-weight: 400;
-        src: url('/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
-    }
-
      .navigation {
-         background-color: rgba(255, 255, 255, .3);
          padding: 1rem 2rem;
      }
 
-     .navigation-link {
+     .navigation {
          font-family: Raleway, monospace;
          font-weight: 800;
+         color: #fff;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     .title {
+         color: var(--theme-font-color);
+     }
+
+     .links {
+         list-style: none;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+     }
+
+     .links > li {
+        padding-right: .5rem;
      }
  </style>
