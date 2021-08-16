@@ -1,5 +1,42 @@
+@font-face {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: RalewayItalic;
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Bitter;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: BitterItalic;
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --main-font-color: #dfd3c3;
+    --theme-background-color: #282e35;
+    --theme-title-font: Raleway;
+    --theme-title-italic-font: RalewayItalic;
+    --theme-paragraph-font: Bitter;
+    --theme-italic-font: BitterItalic;
+}
+
 html, body {
-  background-color: #282e35;
+  background-color: var(--theme-background-color);
   position: relative;
   width: 100%;
   height: 100%;
@@ -13,8 +50,16 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--theme-title-font);
+}
+
+p, span {
+    font-family: var(--theme-paragraph-font)
+}
+
 a {
-  color: rgb(0,100,200);
+  color: --main-font-color;
   text-decoration: none;
 }
 
@@ -23,7 +68,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(0,80,160);
+  color: #dfd3c3;
 }
 
 label {
@@ -31,7 +76,7 @@ label {
 }
 
 input, button, select, textarea {
-  font-family: inherit;
+  font-family: var(--theme-title-font);
   font-size: inherit;
   -webkit-padding: 0.4em 0;
   padding: 0.4em;
