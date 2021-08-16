@@ -3,8 +3,12 @@
 </script>
 
 <main>
-  <h1>{pageName}</h1>
-  <p>Welcome this is my <b>{pageName}</b></p>
+    <h1>Vincent Kempers</h1>
+    <p>Welcome this is my <b>{pageName}</b></p>
+    <div>
+    <!-- Need to the get a new picture for my portfolio -->
+        <!-- <img src="" alt="" /> -->
+    </div>
 </main>
 
 <style>
@@ -17,8 +21,10 @@
   }
 
   h1 {
-      color: #ff3e00;
+      color: var(--main-font-color);
       text-transform: uppercase;
+      letter-spacing: 22px;
+      text-align: left;
       font-size: 4em;
       font-weight: 100;
   }
